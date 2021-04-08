@@ -40,3 +40,10 @@ class MyClass<T> {
 }
 
 const myClass = new MyClass<string>('苏苏')
+
+let arr: Array<string>
+arr = [];
+arr.push('sdsds');
+// arr.push(9090)
+
+

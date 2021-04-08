@@ -20,11 +20,16 @@
     *   - 如果子类添加了父类相同的方法，则子类的方法就会覆盖父类的方法，成为子类重写了父类的方法
     * */
     class Dog extends Animal{
+        shout () {
+            console.log('汪汪汪')
+        }
 
     }
 
     class Cat extends Animal{
-
+        shout () {
+            console.log('喵喵喵')
+        }
     }
 
     const dog = new Dog("旺财", 4)

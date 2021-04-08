@@ -5,11 +5,9 @@
         age: number
 
         constructor(name: string, age: number) {
-
             this.name = name
             this.age = age
         }
-
     }
 
     const person = new Person('孙悟空', 20)
@@ -20,8 +18,6 @@
     * */
     person.name = '猪八戒'
     person.age = -38  // 由于年龄是不能用复数来表示的
-
-
     class Animal {
         // TS可以在属性前添加属性的修饰符
         /*
@@ -33,7 +29,7 @@
         private name: string
         // 若年龄只能读不可改，readonly，
         private readonly age: number
-        private _gender: string
+        _gender: string
 
         constructor(name: string, age: number, gender: string) {
             this.name = name
@@ -73,8 +69,6 @@
     pig.gender = '女'
     console.log(pig.gender);
 
-
-    //----------------------------
     class A {
         protected number: number;
 
@@ -93,7 +87,6 @@
     b.test()
 
     class C {
-
         // 这样的写法可直接定义在构造函数中，这么写会更加方便一些
         constructor(public name: string, public age: number) {
         }

@@ -4,14 +4,16 @@
     type myTpe = {
         name: string;
         age: number;
-        // [propName: string]: any;
+        [propName: string]: any;
     }
 
     // 在创建对象时，我们发现myType类型限制了创建的obj对象的属性和类型
     // 就是说多一个或者少一个 都会报错
     const obj: myTpe = {
-        name: 'sends',
-        age: 2
+        name: 'KenDi',
+        age: 24,
+        gender: '男',
+        weight: '65kg'
     }
 
 
@@ -25,7 +27,8 @@
     }
 
     interface myInterface {
-        gender: string
+        name: string;
+        gender: string;
     }
 
     const ooj: myInterface = {
@@ -35,7 +38,7 @@
     }
 
     /*
-    * 类的定义
+    * 接口中类的定义
     *   接口可以在定义类的时候去限制类的结构
     *       - 接口类型中的所有属性都不能有实际值
     *       - 在接口中所有的方法都是抽象方法
@@ -53,5 +56,15 @@
             this.age = age
             this.gender = gender
         }
+
+        getName(): string{
+            return this.name;
+        }
+        setName(value: string) {
+            this.name = value;
+        }
     }
+
+    const myClass = new MyClass('high',20,'男');
+    myClass.setName('small')
 })()
